@@ -232,7 +232,7 @@ def draw(window, background, bg_img, player, objects, offset_x):
 
     pygame.display.update()
 
-def cuidar_colizao_vert(player,objects,dy):
+def cuidar_colisao_vert(player,objects,dy):
     colidir_objetos = []
     for obj in objects:
         if pygame.sprite.collide_mask(player,obj):
@@ -244,7 +244,7 @@ def cuidar_colizao_vert(player,objects,dy):
                 player.hit_cabc()
 
         colidir_objetos.append(obj)
-#lidar com a colizao horizontal
+#lidar com a colisao horizontal
 def colidir(player, objects, dx):
     player.movimento(dx, 0)
     player.update()
@@ -271,7 +271,7 @@ def cuidar_movimentacao(player, objects):
     if teclas[pygame.K_d] and not colidir_direita:
         player.mover_direita(player_vel)
 
-    colidir_vertical = [cuidar_colizao_vert(player, objects, player.y_vel)]
+    colidir_vertical = [cuidar_colisao_vert(player, objects, player.y_vel)]
     
     checar = [colidir_esquerda, colidir_direita, *colidir_vertical]
 
