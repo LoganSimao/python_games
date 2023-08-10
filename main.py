@@ -9,14 +9,14 @@ pygame.init()
 #nome da janela do jogo
 pygame.display.set_caption("Um joguinho ai")
 
-#bg_color = (255, 255, 255) usado só para teste inicial da janela
+#bg_color = (255, 255, 255) usado só para teste inicial da janelaa
 width_, height_ = 1000, 800 #altura e largura da tela inicial do jogo
 fps = 60
 player_vel = 5 #velocidade do jogador
 
 window = pygame.display.set_mode((width_,height_))# configuração da tela em uma variavel
 
-#----------------------------------------------------#
+#--------------------------------------------------------------------------------------#
 
 def flip(sprites): #mudar a direção das sprites(imagens)
     return[pygame.transform.flip(sprite, True, False) for sprite in sprites] #True ele vai virar a sprite em uma direção e falso vai voltar para a posição "original"
